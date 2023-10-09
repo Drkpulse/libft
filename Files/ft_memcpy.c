@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 15:35:01 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 09:52:59 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/09 11:47:23 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/09 12:13:45 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void *ft_memcpy(void *dest, const void * src, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	rest_d;
-	unsigned int	rest_s;
+	size_t	i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	i = ft_strlen(dest);
-	j = 0;
-	rest_d = ft_strlen(dest);
-	rest_s = ft_strlen(src);
-	if (size < 1)
-		return (rest_s + size);
-	while (src[j] && i < size - 1)
+	i = 0;
+	d = dest;
+	s = src;
+
+	if (!d && !s)
+		return (dest);
+
+	while(i < n )
 	{
-		dest [i] = src[j];
-		i++;
-		j++;
+		d[i] = s[i];
 	}
-	dest[i] = '\0';
-	if (size < rest_d)
-		return (rest_s + size);
-	else
-		return (rest_d + rest_s);
+
+	return (dest);
+}
+
+int main()
+{
+	char frs[]="Cookies!!";
+	char dest[10];
+
+	printf("%s", ft_memcpy(dest, frs, 9));
 }

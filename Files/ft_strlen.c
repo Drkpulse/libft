@@ -6,11 +6,11 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:08 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/06 15:52:46 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/09 09:44:10 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t strlen(const char *str)
 {

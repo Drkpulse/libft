@@ -6,11 +6,11 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:58 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/06 15:54:44 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/09 10:35:03 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 char *ft_strchr(const char *str, int c)
 {
@@ -32,7 +32,7 @@ char *ft_strchr(const char *str, int c)
 #include <string.h>
 
 int main () {
-   const char str[] = "https://www.tutorialspoint.com";
+   const char str[] = "Heyo yo. asdsad" ;
    const char ch = '.';
    char *ret;
    char *rete;

@@ -1,39 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 15:35:01 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 09:52:59 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/09 10:44:18 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/09 12:13:36 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void *memset(void *str, int c, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	rest_d;
-	unsigned int	rest_s;
+    size_t	i;
 
-	i = ft_strlen(dest);
-	j = 0;
-	rest_d = ft_strlen(dest);
-	rest_s = ft_strlen(src);
-	if (size < 1)
-		return (rest_s + size);
-	while (src[j] && i < size - 1)
+    char	*frs;
+
+	i = 0;
+
+	frs = (char *)str;
+	while ( i < n)
 	{
-		dest [i] = src[j];
+		frs[i] = c;
 		i++;
-		j++;
 	}
-	dest[i] = '\0';
-	if (size < rest_d)
-		return (rest_s + size);
-	else
-		return (rest_d + rest_s);
+
+	return (frs);
 }
+/*
+int main () {
+   char str[50];
+
+   strcpy(str,"Join the Darkside, we have cookies");
+   puts(str);
+
+   memset(str,'B',7);
+   puts(str);
+   
+   return(0);
+}
+*/
