@@ -1,42 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 11:47:23 by joseferr          #+#    #+#             */
+/*   Created: 2023/10/09 12:57:15 by joseferr          #+#    #+#             */
 /*   Updated: 2023/10/09 13:01:58 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memcpy(void *dest, const void * src, size_t n)
+char	*ft_strrchr(const char *str, int c)
 {
-	size_t	i;
-	unsigned char		*d;
-	const unsigned char	*s;
-
-	i = 0;
-	d = dest;
-	s = src;
-
-	if (!d && !s)
-		return (dest);
-
-	while(i < n )
-	{
-		d[i] = s[i];
-		i++;
-	}
-
-	return (dest);
+	
 }
-/*
-int main()
-{
-	char frs[]="Cookies!!";
-	char dest[10];
-	printf("%s\n", ft_memcpy(dest, frs, 8));
-}*/
