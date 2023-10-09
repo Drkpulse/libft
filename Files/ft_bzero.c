@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 15:35:11 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 12:56:44 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/09 12:35:45 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/09 12:52:49 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int arg)
+void	ft_bzero(void *s, size_t n)
 {
-    if (arg >= 65 && arg <= 90)
-        {
-            arg = arg + 32;
-            return(arg);
-        }
-    else
-        return(arg);
+	unsigned char	*p;
+
+	p = s;
+	while (n)
+	{
+		*p++ = 0;
+		--n;
+	}
 }
+/*
+int main()
+{
+	int i = 10;
+	char frs[]="Cookies!!";
+	ft_bzero(frs, 4);
+	while (i--)
+	printf("%c", frs[i]);
+}*/

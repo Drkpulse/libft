@@ -1,24 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/06 15:35:11 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 12:56:44 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/09 12:27:53 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/09 12:55:55 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int arg)
+void *ft_memmove(void *str1, const void *str2, size_t n)
 {
-    if (arg >= 65 && arg <= 90)
-        {
-            arg = arg + 32;
-            return(arg);
-        }
-    else
-        return(arg);
+    size_t	i;
+	unsigned char		*d;
+	const unsigned char	*s;
+
+	i = 0;
+	d = str1;
+	s = str2;
+
+	if (!d && !s)
+		return (str1);
+
+	while(i < n )
+	{
+		d[i] = s[i];
+		i++;
+	}
+
+	return (str1);
 }
+/*
+int main()
+{
+	char frs[]="Cookies!!";
+	char dest[]="Bananas are good!";
+	printf("%s\n", ft_memmove(dest, frs, 7));
+}*/
