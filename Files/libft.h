@@ -6,12 +6,12 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:19 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:54:38 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:35:52 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft
-#define libft
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <string.h>
 # include <stdlib.h>
@@ -40,8 +40,7 @@ char	*ft_strnstr(const char *string, const char *substring, size_t len);
 char	*ft_strrchr(const char *str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
-
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *src);
 //NON NORMAL FUNCTIONS//
-
 #endif

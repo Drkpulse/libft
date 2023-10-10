@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:41:58 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:53:59 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:22:52 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ char	*ft_strnstr(const char *string, const char *substring, size_t len)
 	}
 	return (NULL);
 }
-
+/*
 int	main()
 {
 	char	str[] = "Indo eu, indo eu";
 	char	str1[] = "indo";
 	printf("%s", ft_strnstr(str, str1, ft_strlen(str)));
-}
+}*/

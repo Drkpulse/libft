@@ -6,24 +6,26 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:58 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 12:56:23 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:38:37 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    int i;
+	char	*frs;
 
-    i = 0;
-    while(str)
-    {
-        if (str[i] == c)
-        {
-            return str;
-        }
-    }    
+	frs = (char *)str;
+	while (*frs)
+	{
+		if (*frs == (unsigned char)c)
+			return (frs);
+		frs++;
+	}
+	if (c == 0)
+		return (frs);
+	return (NULL);
 }
 /*
 int main () {
@@ -37,6 +39,6 @@ int main () {
 
    printf("String after |%c| is - |%s|\n", ch, ret);
    printf("String after |%c| is - |%s|\n", ch, rete);
-   
+
    return(0);
 }*/

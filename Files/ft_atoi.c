@@ -6,13 +6,13 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:02 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:47:55 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:31:39 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	t_atoi(const char *str)
 {
 	int	result;
 	int	sign;

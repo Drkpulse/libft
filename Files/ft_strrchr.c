@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:57:15 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:17:15 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:29:46 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,18 @@ char	*ft_strrchr(const char *str, int c)
 	char	*frs;
 
 	frs = NULL;
-
-	while(*str)
+	while (*str)
 	{
-		if(*str == (unsigned char)c)
+		if (*str == (unsigned char)c)
 			frs = (char *)str;
 		str++;
 	}
-	if (c == 0 )
-		return((char *)str);
+	if (c == 0)
+		return ((char *)str);
 	return (frs);
 }
 /*
-int	main()
+int	main(void)
 {
 	char	str[] = "Where do you find love?";
 	char	c = 'y';

@@ -6,27 +6,24 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 10:44:18 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:51:08 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:34:19 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *memset(void *str, int c, size_t n)
+void	*memset(void *str, int c, size_t n)
 {
-    size_t	i;
-
-    char	*frs;
+	size_t	i;
+	char	*frs;
 
 	i = 0;
-
 	frs = (char *)str;
-	while ( i < n)
+	while (i < n)
 	{
 		frs[i] = c;
 		i++;
 	}
-
 	return (frs);
 }
 /*
@@ -38,7 +35,7 @@ int main () {
 
    memset(str,'B',7);
    puts(str);
-   
+
    return(0);
 }
 */

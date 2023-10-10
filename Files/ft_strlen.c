@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:08 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:30:01 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 20:22:37 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ size_t	ft_strlen(const char *str)
 int main()
 {
 	char frs[10] = "Heyo";
-	
+
 	printf("%d", ft_strlen(frs));
 }*/
