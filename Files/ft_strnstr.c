@@ -1,37 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 12:57:15 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:17:15 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/10 18:41:58 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/10 19:22:27 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*frs;
+	size_t	n;
 
-	frs = NULL;
-
-	while(*str)
+	if (*little == 0)
+		return ((char *)big);
+	n = ft_strlen(little);
+	if (len == 0)
+		return (0);
+	while (*big && n <= len)
 	{
-		if(*str == (unsigned char)c)
-			frs = (char *)str;
-		str++;
+		if (*big == *little && ft_strncmp(big, little, n) == 0)
+			return ((char *)big);
+		++big;
+		--len;
 	}
-	if (c == 0 )
-		return((char *)str);
-	return (frs);
+	return (NULL);
 }
-/*
+
 int	main()
 {
-	char	str[] = "Where do you find love?";
-	char	c = 'y';
-	printf ("%s/n",ft_strrchr(str, c));
-}*/
+	char	str[] = "Indo eu, indo eu";
+	char	str1[] = "indo";
+	printf("%s", ft_strnstr(str, str1, ft_strlen(str)));
+}

@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 12:57:15 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:17:15 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/10 16:42:50 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/10 19:17:51 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+int ft_strncmp ( const char * str1, const char * str2, size_t num )
 {
-	char	*frs;
+	int	i;
 
-	frs = NULL;
-
-	while(*str)
+	i = 0;
+	while (i < num)
 	{
-		if(*str == (unsigned char)c)
-			frs = (char *)str;
-		str++;
+		if ((str1[i] == str2[i]) && (str1[i] != '\0' || str2[i] != '\0'))
+			i++;
+		else
+			return (str1[i] - str2[i]);
 	}
-	if (c == 0 )
-		return((char *)str);
-	return (frs);
+	return (0);
 }
 /*
-int	main()
+int main ()
 {
-	char	str[] = "Where do you find love?";
-	char	c = 'y';
-	printf ("%s/n",ft_strrchr(str, c));
-}*/
+	char	str1[] = "Moulinette", str2[] = "Moulinutte";
+	printf ("%d", ft_strncmp(str1,str2 ,9));
+  	return (0);
+}
+*/

@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/09 12:57:15 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 19:17:15 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/10 17:57:31 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/10 19:16:33 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*frs;
+	unsigned char	*frs;
 
-	frs = NULL;
-
-	while(*str)
+	frs = (unsigned char *)s;
+	c = (unsigned char)c;
+	while (n && *frs != c)
 	{
-		if(*str == (unsigned char)c)
-			frs = (char *)str;
-		str++;
+		++frs;
+		--n;
 	}
-	if (c == 0 )
-		return((char *)str);
-	return (frs);
+	if (n)
+		return ((void *)frs);
+	else
+		return (NULL);
 }
 /*
-int	main()
-{
-	char	str[] = "Where do you find love?";
-	char	c = 'y';
-	printf ("%s/n",ft_strrchr(str, c));
+int main () {
+   const char str[] = "ashasdaas";
+   const char ch = 'd';
+   char *ret;
+
+   ret = ft_memchr(str, ch, strlen(str));
+
+   printf("String after |%c| is - |%s|\n", ch, ret);
+
+   return(0);
 }*/
