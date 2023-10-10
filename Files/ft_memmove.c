@@ -6,34 +6,31 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 12:27:53 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 20:28:31 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 21:04:06 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *str1, const void *str2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t				i;
-	unsigned char		*d;
 	const unsigned char	*s;
+	unsigned char		*d;
 
-	i = 0;
-	d = str1;
-	s = str2;
-	if (!d && !s)
-		return (str1);
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (str1);
+	if (!dest && !src)
+		return (dest);
+	if (dest < src)
+		return (ft_memcpy(dest, src, n));
+	s = (unsigned char *)src;
+	d = (unsigned char *)dest;
+	while (n--)
+		d[n] = s[n];
+	return (dest);
 }
 /*
 int	main(void)
 {
 	char frs[]="Cookies!!";
-	char dest[]="Bananas are good!";
-	printf("%s\n", ft_memmove(dest, frs, 7));
+	char str2[]="Bananas are good!";
+	printf("%s\n", ft_memmove(str2, frs, 7));
 }*/

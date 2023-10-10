@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 16:42:50 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 20:33:56 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 21:03:28 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp( const char *str1, const char *str2, size_t num )
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < num)

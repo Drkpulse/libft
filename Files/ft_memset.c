@@ -6,13 +6,13 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 10:44:18 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 20:34:19 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 21:03:30 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t	i;
 	char	*frs;
