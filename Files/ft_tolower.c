@@ -6,19 +6,19 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:11 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 12:56:44 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 19:54:53 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int arg)
+int ft_tolower(int c)
 {
-    if (arg >= 65 && arg <= 90)
+    if (c >= 65 && c <= 90)
         {
-            arg = arg + 32;
-            return(arg);
+            c = c + 32;
+            return(c);
         }
     else
-        return(arg);
+        return(c);
 }

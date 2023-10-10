@@ -6,19 +6,19 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:15 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 12:56:47 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 19:55:06 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_toupper(int arg)
+int ft_toupper(int c)
 {
-    if (arg >= 97 && arg <= 122)
+    if (c >= 97 && c <= 122)
         {
-            arg = arg - 32;
-            return(arg);
+            c = c - 32;
+            return(c);
         }
     else
-        return(arg);
+        return(c);
 }

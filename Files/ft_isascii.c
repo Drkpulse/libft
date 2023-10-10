@@ -6,15 +6,15 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:23 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 09:44:03 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 19:48:58 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int arg)
+int	ft_isascii(int c)
 {
-		if ((arg >= '!' && arg <= '~') || arg == ' ')
+		if ((c >= '!' && c <= '~') || c == ' ')
 			return (1);
 		else
 			return (0);

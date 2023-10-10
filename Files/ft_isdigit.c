@@ -6,15 +6,15 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:27 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/09 09:44:04 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/10 19:49:07 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int arg)
+int ft_isdigit(int c)
 {
-    if (arg >= 30 && arg <= 39)
+    if (c >= 30 && c <= 39)
         return (1);
     else
         return (0);
