@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:34:58 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 21:03:30 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:40:16 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,24 @@ char	*ft_strchr(const char *str, int c)
 	char	*frs;
 
 	frs = (char *)str;
-	while (*frs)
-	{
-		if (*frs == (unsigned char)c)
-			return (frs);
+	while (*frs && *frs != (unsigned char)c)
 		frs++;
-	}
-	if (c == 0)
+	if (*frs == (unsigned char)c)
 		return (frs);
 	return (NULL);
 }
 /*
 int main () {
-   const char str[] = "Heyo yo. asdsad" ;
-   const char ch = '.';
-   char *ret;
-   char *rete;
+   const char str[] = "Sera que funciona." ;
+   const char ch = 'q';
+   char *rest;
+   char *resto;
 
-   ret = strchr(str, ch);
-   rete = ft_strchr(str, ch);
+   rest = strchr(str, ch);
+   resto = ft_strchr(str, ch);
 
-   printf("String after |%c| is - |%s|\n", ch, ret);
-   printf("String after |%c| is - |%s|\n", ch, rete);
+   printf("String after |%c| is - |%s|\n", ch, rest);
+   printf("String after |%c| is - |%s|\n", ch, resto);
 
    return(0);
 }*/
