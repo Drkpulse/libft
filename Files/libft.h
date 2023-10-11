@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:19 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 21:01:07 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/11 19:41:43 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
-//NORNAL FUNCTIONS//
+//LIBC FUNCTIONS//
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(int c);
@@ -42,5 +42,8 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *src);
-//NON NORMAL FUNCTIONS//
+
+//NON LIBC FUNCTIONS//
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 #endif
