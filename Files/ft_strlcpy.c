@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 15:35:04 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/10 20:33:32 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:04:24 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int	main(void)
 	char	dest[] = "I don't like it here";
 	char	src[] = "But on pretzel day, well, I like pretzel day.";
 
-	ft_strlcpy(dest, src, 20);
+	ft_strlcpy(dest, src, 10);
 	printf("%s \n", dest);
 }*/
