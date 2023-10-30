@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 11:06:32 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/12 14:35:20 by joseferr         ###   ########.fr       */
+/*   Created: 2023/10/16 14:22:59 by joseferr          #+#    #+#             */
+/*   Updated: 2023/10/16 14:22:59 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,29 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*frs;
-	int		len;
-	int		i;
+	char	*join;
+	size_t	len1;
+	size_t	len2;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
-	frs = malloc(sizeof(char) * len + 1);
-	if (!frs || !s1 || !s2)
+	if (!s1 && !s2)
+		return (ft_strdup(""));
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	len1 = ft_strlen(s1);
+	len2 = ft_strlen(s2);
+	join = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (!join)
 		return (NULL);
-	len = 0;
-	i = 0;
-	while (s1[i])
-	{
-		frs[len] = s1[i];
-		i++;
-		len++;
-	}
-	i = 0;
-	while (s2[i])
-	{
-		frs[len] = s2[i];
-		i++;
-		len++;
-	}
-	frs[len] = '\0';
-	return (frs);
+	ft_strlcpy(join, s1, len1 + 1);
+	ft_strlcpy(join, s2, len1 + len2 + 1);
 }
 /*
 int main()
 {
-	char frs1[]="Vou-me juntar";
-	char frs2[]="olha outra frase";
-
-	printf("%s\n", ft_strjoin(frs1, frs2));
-}*/
+	char frs[] = "Juntos somos";
+	char frs1[] = "mais fortes!";
+	printf("%s", ft_strjoin(frs, frs1));
+}
+*/
