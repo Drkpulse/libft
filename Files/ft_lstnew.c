@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 11:12:34 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/30 11:37:05 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/30 16:00:21 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*lst;
 
-	lst = (t_list *)malloc(sizeof(*lst));
+	lst = malloc(sizeof(t_list));
 	if (!lst)
 		return (NULL);
 	lst->content = content;
