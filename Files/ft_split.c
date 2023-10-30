@@ -5,19 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD
 /*   Created: 2023/10/17 11:24:38 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/17 14:58:54 by joseferr         ###   ########.fr       */
-=======
-/*   Created: 2023/10/19 10:02:16 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/19 10:02:16 by joseferr         ###   ########.fr       */
->>>>>>> 8cf9e1a12317f93f7b3ae9a30231a5343977a2b0
+/*   Updated: 2023/10/30 10:54:02 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-<<<<<<< HEAD
 static int	ft_count_words(char const *s, char sep)
 {
 	int	word_count;
@@ -72,9 +66,4 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	ft_allocate(new, s, c);
 	return (new);
-=======
-char **ft_split(char const *s, char c)
-{
-
->>>>>>> 8cf9e1a12317f93f7b3ae9a30231a5343977a2b0
 }

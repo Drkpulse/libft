@@ -6,7 +6,7 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 14:22:59 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/16 14:22:59 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:52:49 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!join)
 		return (NULL);
 	ft_strlcpy(join, s1, len1 + 1);
-	ft_strlcpy(join, s2, len1 + len2 + 1);
+	ft_strlcat(join, s2, len1 + len2 + 1);
+	return (join);
 }
 /*
 int main()
 {
-	char frs[] = "Juntos somos";
+	char frs[] = "Juntos somos ";
 	char frs1[] = "mais fortes!";
 	printf("%s", ft_strjoin(frs, frs1));
 }
