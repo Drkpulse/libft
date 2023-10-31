@@ -6,27 +6,27 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:24:38 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/30 10:54:02 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:47:10 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count_words(char const *s, char sep)
+static int	ft_count(char const *s, char sep)
 {
-	int	word_count;
+	int	count;
 
-	word_count = 0;
+	count = 0;
 	while (*s)
 	{
 		while (*s == sep)
 			++s;
 		if (*s)
-			++word_count;
+			++count;
 		while (*s && *s != sep)
 			++s;
 	}
-	return (word_count);
+	return (count);
 }
 
 static void	ft_allocate(char **tab, char const *s, char sep)
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	size = ft_count_words(s, c);
+	size = ft_count(s, c);
 	new = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!new)
 		return (NULL);
