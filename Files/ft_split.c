@@ -6,57 +6,71 @@
 /*   By: joseferr <joseferr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 11:24:38 by joseferr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:47:10 by joseferr         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:14:50 by joseferr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_count(char const *s, char sep)
+static size_t	ft_count(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
 	{
-		while (*s == sep)
+		while (*s == c)
 			++s;
 		if (*s)
 			++count;
-		while (*s && *s != sep)
+		while (*s && *s != c)
 			++s;
 	}
 	return (count);
 }
 
-static void	ft_allocate(char **tab, char const *s, char sep)
+static void	ft_free(char **arr, int i)
 {
-	char		**tab1;
-	char const	*tmp;
-
-	tmp = s;
-	tab1 = tab;
-	while (*tmp)
+	while (i >= 0)
 	{
-		while (*s == sep)
-			++s;
-		tmp = s;
-		while (*tmp && *tmp != sep)
-			++tmp;
-		if (*tmp == sep || tmp > s)
-		{
-			*tab1 = ft_substr(s, 0, tmp - s);
-			s = tmp;
-			++tab1;
-		}
+		free(arr[i]);
+		i--;
 	}
-	*tab1 = NULL;
+	free(arr);
+}
+
+static char	**ft_allocate(char **frs, char const *s, char c, size_t size)
+{
+	size_t		i;
+	const char	*start;
+
+	i = 0;
+	while (i < size)
+	{
+		while (*s == c)
+			s++;
+		if (*s != '\0')
+		{
+			start = s;
+			while (*s && *s != c)
+				s++;
+			frs[i] = ft_substr(start, 0, s - start);
+			if (!frs[i])
+			{
+				ft_free(frs, i);
+				return (NULL);
+			}
+		}
+		i++;
+	}
+	frs[i] = NULL;
+	return (frs);
 }
 
 char	**ft_split(char const *s, char c)
 {
+	size_t	size;
 	char	**new;
-	int		size;
 
 	if (!s)
 		return (NULL);
@@ -64,6 +78,6 @@ char	**ft_split(char const *s, char c)
 	new = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!new)
 		return (NULL);
-	ft_allocate(new, s, c);
+	new = ft_allocate(new, s, c, size);
 	return (new);
 }
