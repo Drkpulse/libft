@@ -8,6 +8,7 @@
 
 <p align="center">
 	<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/drkpulse/libft?color=lightblue" />
+	<img src="https://img.shields.io/badge/125%20%2F%20100%20%E2%98%85-success" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/drkpulse/libft?color=blue" />
 	<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/drkpulse/libft?color=green" />
 </p>
